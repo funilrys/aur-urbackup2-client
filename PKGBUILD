@@ -8,7 +8,7 @@ arch=('i686' 'x86_64' 'armv5' 'armv6h' 'armv6' 'armv7h' 'armv7' 'aarch64')
 url="http://www.urbackup.org/"
 license=("GPL")
 makedepends=('gcc-libs' 'gcc' 'make')
-depends=('wxgtk2' 'crypto++' 'zlib')
+depends=('wxgtk2-wxgtk-provides-latest' 'crypto++' 'zlib')
 conflicts=('urbackup2-client-no-gui' 'urbackup-client-no-gui' 'urbackup-client')
 source=(
     "https://www.urbackup.org/downloads/Client/${pkgver}/urbackup-client-${pkgver}.0.tar.gz"
