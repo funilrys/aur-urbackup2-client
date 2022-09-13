@@ -44,6 +44,7 @@ jobs:
         run: |
           current=$(grep -P "^pkgver" PKGBUILD | cut -d= -f2)
           latest=$(curl --silent "https://www.urbackup.org/downloads/Client/?C=M;O=D" | grep "folder.gif" | head -1 | sed -r 's/.*href="([^"]+)\/.*/\1/g')
+          latest=$(curl --silent "https://www.urbackup.org/downloads/Client/?C=M;O=D" | grep "folder.gif" | sed -r 's/.*href="([^"]+)\/.*/\1/g' | sort -u -i | tail -1)
 
           aurRepoDir=/tmp/${AUR_PKG_NAME}
           githubRepoDir="${PWD}"
